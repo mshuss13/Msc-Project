@@ -23,10 +23,10 @@ class Net(nn.Module):
         )
         self.fc_layers = nn.Sequential(
             nn.Flatten(),  # Flatten the output from the conv layers
-            nn.Linear(in_features=128 * 5 * 5, out_features=512),  # Adjust the input size accordingly
+            nn.Linear(in_features=128 * 5 * 5, out_features=512),  
             nn.ReLU(),
             nn.Dropout(0.5),
-            nn.Linear(512, 4),  # Final layer output to N_TYPES classes
+            nn.Linear(512, 4),  # Final layer output to 4 classes
         )
 
     def forward(self, x):

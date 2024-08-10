@@ -10,7 +10,7 @@ def compute_shap_values(model, background, test_images):
     # Convert test images to numpy for plotting
     test_numpy = test_images.cpu().numpy()
 
-    # Normalize the image data for visualization (since they were normalized during training between 0 and 1)
+    # Normalise the image data for visualisation (since they were normalised during training between 0 and 1)
     test_numpy = (test_numpy - test_numpy.min()) / (test_numpy.max() - test_numpy.min())
 
     # Transpose the axes to match the format expected by matplotlib (height, width, channels)
